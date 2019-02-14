@@ -9,7 +9,7 @@ import * as settings from "./settings"
 import * as steps from "./steps"
 
 function wake() {
-  settings.loadSettings();
+  clock.wake();
   clock.draw();
   date.update();
   hr.draw();
@@ -18,7 +18,7 @@ function wake() {
 }
 
 function sleep() {
-  clock.setAnimation(false);
+  clock.sleep();
   hr.stop();
 }
 
@@ -29,5 +29,7 @@ display.addEventListener("change", function() {
     sleep();
   }
 });
+
+settings.loadSettings();
 
 wake();

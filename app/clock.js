@@ -5,6 +5,7 @@ import { preferences } from "user-settings";
 import * as util from "../common/utils";
 import * as batt from "./batt"
 import * as date from "./date"
+import * as steps from "./steps"
 
 const hourLabel = document.getElementById("hour");
 const minsLabel = document.getElementById("min");
@@ -26,12 +27,19 @@ let smallSec = document.getElementsByClassName("sec-line-s");
 let largeSec = document.getElementsByClassName("sec-line-l");
 
 let animsEnabled = true;
+let animsSetting = true;
 
 let radius = 92;
 let smallInner = -52;
 let smallOuter = -55;
 let largeInner = -50;
 let largeOuter = -57;
+
+let prevHour = -1;
+let prevMin = -1;
+
+let secondsDrawn = false;
+let goalMetUpdated = false;
 
 // Update the clock every second
 clock.granularity = "seconds";
@@ -65,12 +73,15 @@ function updateClock(evt) {
   if (preferences.clockDisplay === "12h") {
     // 12h format
     hours = hours % 12 || 12;
-  } else {
-    // 24h format
-    hours = util.zeroPad(hours);
   }
-  hourLabel.text = `${util.monoDigits(hours)}`;
-  minsLabel.text = `${util.monoDigits(mins)}`;
+  if (hours != prevHour) {
+    hourLabel.text = `${util.monoDigits(hours)}`;
+    prevHour = hours;
+  }
+  if (mins != prevMin) {
+    minsLabel.text = `${util.monoDigits(mins)}`;
+    prevMin = mins;
+  }
 
   if (animsEnabled) {
     secTrans.from = secSym.groupTransform.rotate.angle;
@@ -103,17 +114,20 @@ function updateClock(evt) {
 }
 
 function drawSecondLines() {
-  secLines.forEach(function(element, index) {
-    element.groupTransform.rotate.angle = secondsToAngle(index);
-  });
-  smallSec.forEach(function(element) {
-    element.y1 = smallInner;
-    element.y2 = smallOuter;
-  });
-  largeSec.forEach(function(element) {
-    element.y1 = largeInner;
-    element.y2 = largeOuter;
-  });
+  if (!secondsDrawn) {
+    secLines.forEach(function(element, index) {
+      element.groupTransform.rotate.angle = secondsToAngle(index);
+    });
+    smallSec.forEach(function(element) {
+      element.y1 = smallInner;
+      element.y2 = smallOuter;
+    });
+    largeSec.forEach(function(element) {
+      element.y1 = largeInner;
+      element.y2 = largeOuter;
+    });
+    secondsDrawn = true;
+  }
 }
 
 function updateSecondPosition() {
@@ -132,18 +146,48 @@ function updateMinutePosition() {
   minLabelSym.groupTransform.rotate.angle = 360 - minAngle;
 }
 
+function updateSecondsColor(color) {
+  smallSec.forEach(function(element) {
+    element.style.fill = color;
+  });
+  largeSec.forEach(function(element) {
+    element.style.fill = color;
+  });
+}
+
+function checkGoal() {
+  let goalMet = steps.reachedGoal();
+  if (goalMet != goalMetUpdated) {
+    if (goalMet) {
+      updateSecondsColor("fb-lime");
+    } else {
+      updateSecondsColor("fb-white");
+    }
+    goalMetUpdated = goalMet;
+  }
+}
+
 export function draw() {
   drawSecondLines();
   updateSecondPosition();
   updateMinutePosition();
+  checkGoal();
 }
 
 export function setAnimation(anims) {
   animsEnabled = anims;
+  animsSetting = anims;
+}
+
+export function sleep() {
+  animsEnabled = false;
+}
+
+export function wake() {
+  animsEnabled = animsSetting;
 }
 
 export function setColour(colour) {
-  console.log("set: " + colour);
   secDot.style.fill = colour;
 }
 

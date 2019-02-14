@@ -41,6 +41,7 @@ export function draw() {
     }
     if (!hrAnimsEnabled && hrAnimated) {
       clearInterval(hrInterval);
+      prevHeartRate = null;
       hrAnimated = false;
       hrAnim.animate("disable");
     }
@@ -83,6 +84,7 @@ export function stop() {
     body.stop();
     hrm.stop();
     clearInterval(hrInterval);
+    hrAnimated = false;
   }
 }
 

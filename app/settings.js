@@ -52,6 +52,7 @@ messaging.peerSocket.addEventListener("message", function(evt) {
   if (!settings) {
     settings = {};
   }
+  console.log("message");
   settings[evt.data.key] = evt.data.value;
   onsettingschange(settings);
 })
@@ -59,12 +60,15 @@ messaging.peerSocket.addEventListener("message", function(evt) {
 appbit.addEventListener("unload", saveSettings);
 
 export function loadSettings() {
+  console.log("loaded");
   try {
     return fs.readFileSync(SETTINGS_FILE, SETTINGS_TYPE);
   } catch (ex) {
     console.log(ex);
     var defaults = {
       animsEnabled: true,
+      hrAnimsEnabled: true,
+      accentColour: "#F80070",
     };    
     
     return defaults;
