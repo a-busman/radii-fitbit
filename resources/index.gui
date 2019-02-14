@@ -1,0 +1,270 @@
+<svg id="root" viewport-fill="black">
+  <g id="days">
+    <circle class="dow-circle" id="day1" cx="4%" cy="10%" r="4" fill="white"/>
+    <circle class="dow-circle" id="day2" cx="4%" cy="23%" r="4" fill="white"/>
+    <circle class="dow-circle" id="day3" cx="4%" cy="36%" r="4" fill="white"/>
+    <circle class="dow-circle" id="day4" cx="4%" cy="50%" r="4" fill="white"/>
+    <circle class="dow-circle" id="day5" cx="4%" cy="63%" r="4" fill="white"/>
+    <circle class="dow-circle" id="day6" cx="4%" cy="76%" r="4" fill="white"/>
+    <circle class="dow-circle" id="day7" cx="4%" cy="90%" r="4" fill="white"/>
+    <text id="dow" font-size="15" font-weight="bold" font-family="Colfax-Bold" text-anchor="middle" x="4%+1" y="10%" fill="fb-black">S</text>
+    <text id="date" font-size="15" font-weight="bold" font-family="Colfax-Bold" text-anchor="middle" x="4%+23" y="10%" fill="fb-white">01</text>
+  </g>
+  
+  <g id="heart-g">
+    <text id="heart-rate" font-size="25" font-family="Colfax-Regular" text-anchor="start" x="50%" y="10%+5" fill="fb-light-gray">&#160;-- </text>
+    <defs>
+      <symbol id="hr-img-s">
+        <g id="hr-img-g">
+          <image id="hr-img" href="hr-24px.png" width="24" height="24" x="50%-35" y="10%-16" fill="fb-red" />
+          <animate id="hr-anim1" final="keep" attributeName="opacity" from="0.7" to="1" begin="enable;disable" dur="0.1" easing="ease-in"/>
+          <animate id="hr-anim2" final="keep" attributeName="opacity" from="1" to="0.7" begin="enable+0.1" dur="0.1" easing="ease-out"/>
+        </g>
+      </symbol>
+    </defs>
+    <svg width="100%" height="100%">
+      <use id="hr-anim" href="#hr-img-s" width="100%" height="100%" />
+    </svg>
+  </g>
+  
+  <g id="steps">
+    <image href="steps-24px.png" width="24" height="24" x="50%-35" y="90%-5" fill="fb-white" />
+    <text id="step-count" font-size="25" font-family="Colfax-Regular" text-anchor="start" x="50%" y="95%" fill="fb-light-gray">&#160;--   </text>
+  </g>
+
+  <g id="sec-lines" pointer-events="visible" transform="translate(50%,50%) scale(0.9)">
+    <g class="sec-line-g">
+      <line class="sec-line-l" x1="0" x2="0" y1="-48" y2="-57" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-l" x1="0" x2="0" y1="-48" y2="-57" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-l" x1="0" x2="0" y1="-48" y2="-57" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-l" x1="0" x2="0" y1="-48" y2="-57" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-l" x1="0" x2="0" y1="-48" y2="-57" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-l" x1="0" x2="0" y1="-48" y2="-57" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-l" x1="0" x2="0" y1="-48" y2="-57" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-l" x1="0" x2="0" y1="-48" y2="-57" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-l" x1="0" x2="0" y1="-48" y2="-57" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-l" x1="0" x2="0" y1="-48" y2="-57" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-l" x1="0" x2="0" y1="-48" y2="-57" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-l" x1="0" x2="0" y1="-48" y2="-57" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+    <g class="sec-line-g">
+      <line class="sec-line-s" x1="0" x2="0" y1="-50" y2="-55" fill="fb-white" />
+    </g>
+  </g>
+  <g id="hour-num" transform="translate(50%,50%) scale(0.9)">
+    <text id="hour" x="3" y="22" fill="fb-white" text-anchor="middle" font-size="60" font-weight="regular" font-family="SevilleSharp-Book">00</text>
+  </g>
+  <g id="mins" transform="translate(50%,50%) scale(0.9)">
+    <defs>
+      <symbol id="min-dot-s">
+        <g id="min-bg">
+          <circle cx="0" cy="-90" r="22" fill="white"/>
+          <g id="min-rect-g-pos" transform="translate(0, -93)">
+            <g id="min-rect-g" transform="rotate(45)">
+              <rect x="0" y="0" width="20" height="20" fill="white"/>
+            </g>
+          </g>
+          <!--line id="min-h" x1="-90" x2="90" y1="-90" y2="-90" fill="darkgray"/>
+          <line id="min-v" x1="0" x2="0" y1="-180" y2="0" fill="darkgray"/-->
+          <defs>
+            <symbol id="sec-dot-s">
+              <g id="secs" transform="translate(0,-90)">
+                <circle id="sec-dot" cx="-30" cy="0" r="2" fill="fb-red"/>
+                <animateTransform id="sec-anim-transform" attributeType="rotate" begin="enable" dur="1" final="keep" easing="linear" />
+              </g>
+            </symbol>
+          </defs>
+          <svg width="100%" height="100%">
+            <use id="secs-anim" href="#sec-dot-s" width="100%" height="100%" />
+          </svg>
+          <animateTransform id="min-anim-transform" attributeType="rotate" begin="enable" dur="1" final="keep" easing="ease-in-out" />
+          <defs>
+            <symbol id="min-text-s">
+              <g id="min-text-g" transform="translate(0, -90)">
+                <!--circle id="center-text" fill="fb-blue" r="2" cx="0" cy="0"/-->
+                <textarea id="min" x="-11" y="-12" width="44" height="44" fill="fb-black" text-anchor="start" font-size="20" font-weight="bold" font-family="SevilleSharp-Bold" display-align="before">00</textarea>
+                <animateTransform id="min-text-anim-transform" attributeType="rotate" begin="enable" dur="1" final="keep" easing="ease-in-out" />
+              </g>
+            </symbol>
+          </defs>
+          <svg width="100%" height="100%">
+            <use id="min-text-anim" href="#min-text-s" width="100%" height="100%" />
+          </svg>
+        </g>
+      </symbol>
+    </defs>
+    <svg width="100%" height="100%">
+      <use id="mins-anim" href="#min-dot-s" width="100%" height="100%" />
+    </svg>
+  </g>
+  <g id="charge">
+    <line id="charge-bg" x1="95%" x2="95%" y1="10%" y2="90%" fill="white" stroke-width="2"/>
+    <line id="charge-fg" x1="95%" x2="95%" y1="90%" y2="85%" fill="red" stroke-width="4"/>
+    <text id="charge-percent" x="95%-5" y="10%+5" fill="fb-white" font-size="15" font-weight="bold" font-family="Colfax-Bold" text-anchor="end">100%</text>
+  </g>
+  <!--line id="h-guide" x1="0%" x2="100%" y1="50%" y2="50%" fill="darkgray"/>
+  <line id="v-guide" x1="50%" x2="50%" y1="0%" y2="100%" fill="darkgray"/-->
+</svg>

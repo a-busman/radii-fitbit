@@ -1,0 +1,25 @@
+{
+  "fitbit": {
+    "appUUID": "59e04b40-b90a-4518-aba6-b6f47987a740",
+    "appType": "clockface",
+    "appDisplayName": "Radii",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "",
+    "requestedPermissions": [
+      "access_heart_rate",
+      "access_activity"
+    ],
+    "buildTargets": [
+      "higgs",
+      "meson"
+    ],
+    "i18n": {
+      "en": {
+        "name": "Radii"
+      }
+    }
+  },
+  "devDependencies": {
+    "@fitbit/sdk": "~3.0.0"
+  }
+}
