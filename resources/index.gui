@@ -28,8 +28,9 @@
   </g>
   
   <g id="steps">
-    <image href="steps-24px.png" width="24" height="24" x="50%-35" y="90%-5" fill="fb-white" />
-    <text id="step-count" font-size="25" font-family="Colfax-Regular" text-anchor="start" x="50%" y="95%" fill="fb-light-gray">&#160;--   </text>
+    <image href="steps-24px.png" width="24" height="24" x="50%-11" y="90%-5" fill="fb-white" />
+    <text id="step-count" font-size="25" font-family="Colfax-Regular" text-anchor="start" x="50%+20" y="95%" fill="fb-light-gray">&#160;--   </text>
+    <text id="steps-remaining" font-size="25" font-family="Colfax-Regular" text-anchor="end" x="50%-20" y="95%" fill="fb-light-gray">&#160;-- </text>
   </g>
 
   <g id="sec-lines" pointer-events="visible" transform="translate(50%,50%) scale(0.9)">
