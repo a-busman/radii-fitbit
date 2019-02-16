@@ -168,7 +168,6 @@ function checkGoal() {
 }
 
 export function draw() {
-  drawSecondLines();
   updateSecondPosition();
   updateMinutePosition();
   checkGoal();
@@ -193,3 +192,5 @@ export function setColour(colour) {
 
 // Update the clock every tick event
 clock.ontick = (evt) => updateClock(evt);
+
+drawSecondLines();
