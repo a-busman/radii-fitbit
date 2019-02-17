@@ -1,6 +1,6 @@
 import document from "document";
 
-const root = document.getElementById("root");
+export const root = document.getElementById("root");
 
 export function zeroPad(i) {
   if (i < 10) {

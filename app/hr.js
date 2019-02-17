@@ -21,6 +21,8 @@ let heartRate = null;
 
 let hrAnimsEnabled = true;
 
+let hidden = false;
+
 if (me.permissions.granted("access_heart_rate")) {
   var hrm = new HeartRateSensor({ frequency: 1 });
   var body = new BodyPresenceSensor();
@@ -91,6 +93,22 @@ export function stop() {
 export function setAnimation(anims) {
   hrAnimsEnabled = anims;
   draw();
+}
+
+export function showHide() {
+  let hr = document.getElementById("heart-g");
+  hidden = !hidden;
+  if (hidden) {
+    if (me.permissions.granted("access_heart_rate")) {
+      hrm.stop();
+    }
+    hr.style.display = "none";
+  } else {
+    if (me.permissions.granted("access_heart_rate")) {
+      hrm.start();
+    }
+    hr.style.display = "inline";
+  }
 }
 
 body.onreading = () => {
